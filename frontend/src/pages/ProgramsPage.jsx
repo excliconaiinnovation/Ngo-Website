@@ -1,74 +1,94 @@
 import { motion } from "framer-motion";
 import { Search, ArrowRight } from "lucide-react";
+import program1 from "../assets/images/program1.png";
+import program2 from "../assets/images/program2.png";
+import program3 from "../assets/images/program3.png";
+import program4 from "../assets/images/program4.png";
+import program5 from "../assets/images/program5.png";
+import program6 from "../assets/images/program6.png";
+import ProgramsPages from "../assets/images/Programpages.png"
+
+
 
 export default function ProgramsPage() {
   const programs = [
-    {
-      title: "Education Support",
-      image:
-        "https://images.unsplash.com/photo-1509062522246-3755977927d7",
-      impact: "12,000+ Students",
-      progress: 90,
-    },
-    {
-      title: "Healthcare Initiative",
-      image:
-        "https://images.unsplash.com/photo-1576091160550-2173dba999ef",
-      impact: "8,500+ Families",
-      progress: 80,
-    },
-    {
-      title: "Women Empowerment",
-      image:
-        "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f",
-      impact: "5,000+ Women",
-      progress: 75,
-    },
-    {
-      title: "Youth Leadership",
-      image:
-        "https://images.unsplash.com/photo-1522202176988",
-      impact: "3,200+ Youth",
-      progress: 88,
-    },
-    {
-      title: "Environmental Protection",
-      image:
-        "https://images.unsplash.com/photo-1466611653911-95081537e5b7",
-      impact: "50,000+ Trees",
-      progress: 95,
-    },
-    {
-      title: "Community Welfare",
-      image:
-        "https://images.unsplash.com/photo-1488521787991",
-      impact: "20,000+ People",
-      progress: 85,
-    },
-  ];
+  {
+    title: "Scout Training Program",
+    image: program1,
+    impact: "8,000+ Scouts",
+    progress: 95,
+    description:
+      "Leadership development, discipline, teamwork and outdoor skills through structured Scout training.",
+  },
+  {
+    title: "Guide Training Program",
+    image: program2,
+    impact: "5,000+ Guides",
+    progress: 90,
+    description:
+      "Empowering young girls through leadership and community engagement.",
+  },
+  {
+    title: "Adventure & Camping",
+    image: program3,
+    impact: "2,500+ Participants",
+    progress: 88,
+    description:
+      "Camping, trekking, hiking and survival activities.",
+  },
+  {
+    title: "Community Service",
+    image: program4,
+    impact: "20,000+ Citizens Served",
+    progress: 92,
+    description:
+      "Volunteer service projects and awareness campaigns.",
+  },
+  {
+    title: "Environmental Protection",
+    image: program5,
+    impact: "50,000+ Trees Planted",
+    progress: 97,
+    description:
+      "Tree plantation drives and sustainability initiatives.",
+  },
+  {
+    title: "First Aid & Disaster Management",
+    image: program6,
+    impact: "3,000+ Trainees",
+    progress: 85,
+    description:
+      "Emergency response and disaster preparedness workshops.",
+  },
+];
 
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-green-700 to-emerald-500 text-white py-40 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <span className="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full">
-            Transforming Lives Through Action
+      <section className="relative overflow-hidden bg-gradient-to-br from-green-900 via-green-700 to-emerald-500 text-white py-40">
+        <div className="absolute inset-0 bg-black/10"></div>
+
+        <div className="relative max-w-7xl mx-auto px-6 text-center">
+          <span className="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full text-sm font-medium">
+            National Youth Development Programs
           </span>
 
-          <h1 className="text-5xl md:text-7xl font-bold mt-6">
-            Our Programs
+          <h1 className="text-5xl md:text-7xl font-bold mt-8 leading-tight">
+            Programs That Build
+            <br />
+            Future Leaders
           </h1>
 
-          <p className="max-w-3xl mx-auto mt-6 text-lg md:text-xl">
-            Empowering communities through education,
-            healthcare, environment, leadership and
-            social development initiatives.
+          <p className="max-w-3xl mx-auto mt-6 text-lg md:text-xl text-green-100">
+            Our programs are designed to develop leadership,
+            discipline, character and service-minded citizens through
+            scouting, guiding, adventure learning and community
+            engagement.
           </p>
         </div>
       </section>
 
-      {/* Search & Filters */}
+      {/* Search */}
       <section className="max-w-7xl mx-auto px-6 -mt-12 relative z-10">
         <div className="bg-white rounded-3xl shadow-2xl p-6 flex flex-col md:flex-row gap-4">
           <div className="flex items-center border rounded-xl px-4 flex-1">
@@ -80,7 +100,7 @@ export default function ProgramsPage() {
             />
           </div>
 
-          <button className="bg-green-600 text-white px-8 py-3 rounded-xl">
+          <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-xl transition">
             Search
           </button>
         </div>
@@ -90,18 +110,30 @@ export default function ProgramsPage() {
       <section className="max-w-7xl mx-auto px-6 py-20">
         <div className="grid md:grid-cols-4 gap-6">
           {[
-            ["25+", "Programs"],
-            ["50K+", "Beneficiaries"],
-            ["500+", "Volunteers"],
-            ["15+", "States"],
+            ["15,000+", "Registered Members"],
+            ["500+", "Training Camps"],
+            ["100+", "Affiliated Schools"],
+            ["25+", "State Units"],
           ].map(([num, title]) => (
             <div
               key={title}
-              className="bg-white rounded-3xl p-8 shadow-lg text-center"
+              className="
+                bg-white/80
+                backdrop-blur-lg
+                border
+                border-gray-100
+                rounded-3xl
+                p-8
+                shadow-xl
+                hover:scale-105
+                transition
+                text-center
+              "
             >
               <h3 className="text-4xl font-bold text-green-600">
                 {num}
               </h3>
+
               <p className="text-gray-500 mt-2">
                 {title}
               </p>
@@ -114,9 +146,9 @@ export default function ProgramsPage() {
       <section className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <img
-            src="https://images.unsplash.com/photo-1509062522246-3755977927d7"
-            alt=""
-            className="rounded-3xl shadow-xl"
+            src={ProgramsPages}
+            alt="Leadership Program"
+            className="rounded-3xl shadow-2xl"
           />
 
           <div>
@@ -124,26 +156,42 @@ export default function ProgramsPage() {
               FEATURED PROGRAM
             </span>
 
-            <h2 className="text-5xl font-bold mt-4">
-              Education For Every Child
+            <h2 className="text-5xl font-bold mt-4 leading-tight">
+              National Scout & Guide Leadership Development Program
             </h2>
 
             <p className="text-gray-600 mt-6 leading-8">
-              Our flagship initiative provides access
-              to quality education, scholarships,
-              digital learning resources and mentorship
-              programs for underprivileged children.
+              Our flagship leadership program equips young people with
+              essential life skills, teamwork, communication abilities
+              and a commitment to community service.
             </p>
 
-            <button className="mt-8 bg-green-600 text-white px-8 py-4 rounded-xl">
+            <p className="text-gray-600 mt-4 leading-8">
+              Through camps, workshops and outdoor learning
+              experiences, participants develop confidence,
+              resilience and leadership qualities that prepare them
+              for future challenges.
+            </p>
+
+            <button className="mt-8 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl transition">
               Learn More
             </button>
           </div>
         </div>
       </section>
 
-      {/* Program Cards */}
+      {/* Programs Grid */}
       <section className="max-w-7xl mx-auto px-6 py-20">
+        <div className="text-center mb-16">
+          <span className="text-green-600 font-semibold uppercase tracking-wider">
+            Our Programs
+          </span>
+
+          <h2 className="text-5xl font-bold mt-4">
+            Explore Our Activities
+          </h2>
+        </div>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {programs.map((program, index) => (
             <motion.div
@@ -153,39 +201,52 @@ export default function ProgramsPage() {
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
               className="
-              bg-white
-              rounded-3xl
-              overflow-hidden
-              shadow-xl
-              hover:-translate-y-3
-              transition
-              duration-300
+                group
+                bg-white
+                rounded-3xl
+                overflow-hidden
+                shadow-xl
+                hover:shadow-2xl
+                hover:-translate-y-3
+                transition-all
+                duration-500
               "
             >
-              <img
-                src={program.image}
-                alt=""
-                className="h-64 w-full object-cover"
-              />
+              <div className="overflow-hidden">
+                <img
+                  src={program.image}
+                  alt={program.title}
+                  className="
+                    h-64
+                    w-full
+                    object-cover
+                    group-hover:scale-110
+                    transition-transform
+                    duration-700
+                  "
+                />
+              </div>
 
               <div className="p-8">
-                <h3 className="text-2xl font-bold">
+                <span className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">
+                  Active Program
+                </span>
+
+                <h3 className="text-2xl font-bold mt-4">
                   {program.title}
                 </h3>
 
-                <p className="text-green-600 mt-2 font-medium">
+                <p className="text-green-600 mt-2 font-semibold">
                   {program.impact}
                 </p>
 
-                <p className="text-gray-600 mt-4">
-                  Empowering communities through
-                  sustainable and impactful programs.
+                <p className="text-gray-600 mt-4 leading-7">
+                  {program.description}
                 </p>
 
-                {/* Progress */}
                 <div className="mt-6">
-                  <div className="flex justify-between mb-2">
-                    <span>Goal Progress</span>
+                  <div className="flex justify-between mb-2 text-sm">
+                    <span>Program Progress</span>
                     <span>{program.progress}%</span>
                   </div>
 
@@ -199,7 +260,7 @@ export default function ProgramsPage() {
                   </div>
                 </div>
 
-                <button className="mt-6 flex items-center gap-2 text-green-600 font-semibold">
+                <button className="mt-6 flex items-center gap-2 text-green-600 font-semibold hover:gap-3 transition-all">
                   Read More
                   <ArrowRight size={18} />
                 </button>
@@ -213,21 +274,26 @@ export default function ProgramsPage() {
       <section className="bg-gradient-to-r from-green-600 to-emerald-500 text-white py-24">
         <div className="max-w-5xl mx-auto text-center px-6">
           <h2 className="text-5xl font-bold">
-            Help Us Expand Our Impact
+            Join The Movement
           </h2>
 
-          <p className="mt-6 text-xl">
-            Join as a volunteer, partner or donor and
-            support meaningful community development.
+          <p className="mt-6 text-xl text-green-100">
+            Become a Scout, Guide, Volunteer or Partner and help us
+            create a generation of responsible, confident and
+            service-oriented young leaders.
           </p>
 
           <div className="mt-10 flex justify-center gap-4 flex-wrap">
-            <button className="bg-white text-green-600 px-8 py-4 rounded-xl font-bold">
+            <button className="bg-white text-green-600 px-8 py-4 rounded-xl font-bold hover:scale-105 transition">
+              Join Now
+            </button>
+
+            <button className="bg-white/10 backdrop-blur-md border border-white px-8 py-4 rounded-xl hover:bg-white/20 transition">
               Become Volunteer
             </button>
 
-            <button className="border border-white px-8 py-4 rounded-xl">
-              Donate Now
+            <button className="bg-white/10 backdrop-blur-md border border-white px-8 py-4 rounded-xl hover:bg-white/20 transition">
+              View Membership
             </button>
           </div>
         </div>

@@ -8,6 +8,7 @@ import EventsPage from "./pages/EventsPage";
 import GalleryPage from "./pages/GalleryPage";
 import TeamPage from "./pages/TeamPage";
 import ContactPage from "./pages/ContactPage";
+import JoinNow from "./pages/JoinNow";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="gallery" element={<GalleryPage />} />
         <Route path="team" element={<TeamPage />} />
         <Route path="contact" element={<ContactPage />} />
+        <Route path="Join_now" element={<JoinNow />} />
       </Route>
     </Routes>
   );

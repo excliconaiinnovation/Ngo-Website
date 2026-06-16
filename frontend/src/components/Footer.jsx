@@ -29,9 +29,15 @@ export default function Footer() {
 
           {/* About */}
           <div>
-            <h2 className="text-3xl font-bold mb-5">
-              Scouts NGO
-            </h2>
+            <div className="leading-tight">
+    <h2 className="text-white font-bold text-lg md:text-xl">
+      Hindustan Scouts
+    </h2>
+
+    <p className="text-green-400 text-sm">
+      & Guides Association
+    </p>
+  </div>
 
             <p className="text-gray-400 leading-7">
               Empowering youth through leadership,

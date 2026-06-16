@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -34,11 +35,23 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           {/* Logo */}
           <Link
-            to="/"
-            className="text-2xl font-bold text-white"
-          >
-            Scouts NGO
-          </Link>
+  to="/"
+  className="flex items-center gap-3"
+>
+  <div className="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-xl">
+    HSGA
+  </div>
+
+  <div className="leading-tight">
+    <h2 className="text-white font-bold text-lg md:text-xl">
+      Hindustan Scouts
+    </h2>
+
+    <p className="text-green-400 text-sm">
+      & Guides Association
+    </p>
+  </div>
+</Link>
 
           {/* Desktop Menu */}
           <nav className="hidden lg:flex items-center gap-8">
@@ -59,20 +72,22 @@ export default function Navbar() {
             ))}
 
             {/* CTA */}
-            <button
-              className="
-              bg-green-600
-              hover:bg-green-700
-              px-6
-              py-3
-              rounded-full
-              text-white
-              font-semibold
-              transition
-            "
-            >
-              Donate Now
-            </button>
+            <Link to="/join_now">
+  <button
+    className="
+      bg-green-600
+      hover:bg-green-700
+      px-6
+      py-3
+      rounded-full
+      text-white
+      font-semibold
+      transition
+    "
+  >
+    Join Now
+  </button>
+</Link>
           </nav>
 
           {/* Mobile Menu Button */}

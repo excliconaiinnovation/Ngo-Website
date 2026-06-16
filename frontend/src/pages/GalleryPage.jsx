@@ -1,42 +1,51 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Search, X } from "lucide-react";
+import image1 from "../assets/gallery/image1.jpg";
+import image2 from "../assets/gallery/image2.jpg";
+import image3 from "../assets/gallery/image3.jpg";
+import image4 from "../assets/gallery/image4.jpg";
+import image5 from "../assets/gallery/image5.jpg";
+import image6 from "../assets/gallery/image6.jpeg";
+
+
 
 export default function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const images = [
-    {
-      category: "Events",
-      image:
-        "https://images.unsplash.com/photo-1529156069898?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      category: "Education",
-      image:
-        "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      category: "Environment",
-      image:
-        "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      category: "Camps",
-      image:
-        "https://images.unsplash.com/photo-1511632765486?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      category: "Events",
-      image:
-        "https://images.unsplash.com/photo-1522202176988?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      category: "Volunteers",
-      image:
-        "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=80",
-    },
-  ];
+  {
+    category: "Scout Camp",
+    title: "National Training Camp",
+    image: image1,
+  },
+  {
+    category: "Scout Camp",
+    title: "Outdoor Leadership Camp",
+    image: image2,
+  },
+  {
+    category: "Community Service",
+    title: "Cleanliness Drive",
+    image: image3,
+  },
+  {
+    category: "Community Service",
+    title: "Social Welfare Activity",
+    image: image4,
+  },
+  {
+    category: "Environment",
+    title: "Tree Plantation Drive",
+    image: image5,
+  },
+  {
+    category: "Environment",
+    title: "Green Earth Campaign",
+    image: image6,
+  },
+  
+];
 
   return (
     <>
